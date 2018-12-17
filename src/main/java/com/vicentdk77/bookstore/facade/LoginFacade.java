@@ -1,4 +1,4 @@
-package main.java.com.vicentdk77.bookstore.facade;
+package com.vicentdk77.bookstore.facade;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.apache.commons.dbutils.QueryRunner;

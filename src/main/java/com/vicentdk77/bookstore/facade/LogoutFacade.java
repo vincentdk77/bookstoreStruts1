@@ -1,4 +1,4 @@
-package main.java.com.vicentdk77.bookstore.facade;
+package com.vicentdk77.bookstore.facade;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;

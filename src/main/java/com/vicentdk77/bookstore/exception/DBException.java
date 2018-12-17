@@ -1,4 +1,4 @@
-package main.java.com.vicentdk77.bookstore.exception;
+package com.vicentdk77.bookstore.exception;
 
 public class DBException extends RuntimeException {
 

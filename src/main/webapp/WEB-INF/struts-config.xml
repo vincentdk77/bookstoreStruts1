@@ -10,10 +10,10 @@
         <!--<form-bean name="loginform" type="com.vicentdk77.bookstore.form.LoginForm" />-->
     <!--</form-beans>-->
     <action-mappings id="mapping1">
-        <action path="/login" type="main.java.com.vicentdk77.bookstore.facade.LoginFacade" validate="false" scope="request" >
+        <action path="/login" type="com.vicentdk77.bookstore.facade.LoginFacade" validate="false" scope="request" >
             <forward name="success" path="/index.jsp"></forward>
         </action>
-        <action path="/logout" type="main.java.com.vicentdk77.bookstore.facade.LogoutFacade" validate="false" scope="request" >
+        <action path="/logout" type="com.vicentdk77.bookstore.facade.LogoutFacade" validate="false" scope="request" >
             <forward name="success" path="/logout.jsp"></forward>
         </action>
     </action-mappings>
