@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <!--请求参数是通过JSP 页面的表单域传递过来的,可以不设置，即不适用actionform获取数据，直接使用request来取即可-->
+    <!--<form-beans>-->
+        <!--<form-bean name="loginform" type="com.vicentdk77.bookstore.form.LoginForm" />-->
+    <!--</form-beans>-->
+    <action-mappings id="mapping1">
+        <action path="/login" type="main.java.com.vicentdk77.bookstore.facade.LoginFacade" validate="false" scope="request" >
+            <forward name="success" path="/index.jsp"></forward>
+        </action>
+        <action path="/logout" type="main.java.com.vicentdk77.bookstore.facade.LogoutFacade" validate="false" scope="request" >
+            <forward name="success" path="/logout.jsp"></forward>
+        </action>
+    </action-mappings>
+</struts-config>
