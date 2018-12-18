@@ -12,6 +12,7 @@
     <action-mappings id="mapping1">
         <action path="/login" type="com.vicentdk77.bookstore.facade.LoginFacade" validate="false" scope="request" >
             <forward name="success" path="/index.jsp"></forward>
+            <forward name="failed" path="/test.jsp"></forward>
         </action>
         <action path="/logout" type="com.vicentdk77.bookstore.facade.LogoutFacade" validate="false" scope="request" >
             <forward name="success" path="/logout.jsp"></forward>

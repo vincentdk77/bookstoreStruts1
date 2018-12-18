@@ -21,7 +21,8 @@ public class LoginFacade extends Action {
         String sql = "SELECT count(id) FROM mybooks WHERE price >= ? AND price <= ?";
         long sum = (Long) queryRunner.query(connection, sql, new ScalarHandler(), 1,55);
         System.err.println("sum="+sum);
-        return mapping.findForward("success");
+//        return mapping.findForward("success");
+        return mapping.findForward("failed");
 
     }
 }
