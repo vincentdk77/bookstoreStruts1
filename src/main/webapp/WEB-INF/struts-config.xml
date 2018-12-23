@@ -17,5 +17,14 @@
         <action path="/logout" type="com.vicentdk77.bookstore.facade.LogoutFacade" validate="false" scope="request" >
             <forward name="success" path="/logout.jsp"></forward>
         </action>
+        <action path="/io" type="com.vicentdk77.bookstore.facade.IOTestFacade" validate="false" scope="request" >
+            <forward name="success" path="/io.jsp"></forward>
+        </action>
+        <action path="/copy" type="com.vicentdk77.bookstore.facade.FileCopyFacade" validate="false" scope="request" >
+            <forward name="success" path="/sccess.jsp"></forward>
+        </action>
+        <action path="/getbooks" type="com.vicentdk77.bookstore.facade.BooksFacade" validate="false" scope="request" >
+            <forward name="success" path="/books.jsp"></forward>
+        </action>
     </action-mappings>
 </struts-config>

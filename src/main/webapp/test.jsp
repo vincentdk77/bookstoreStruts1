@@ -9,17 +9,18 @@
 <html>
 <head>
     <title>Title</title>
-
-    <script language="javascript" type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <%--<script language="javascript" type="text/javascript" src="jquery-1.4.2.min.js"></script>--%>
     <script language="javascript" type="text/javascript">
+
         $(function () {
-            //alert($("div[id='a']").length);
+            alert($("#d").length);
 //            alert($("#sum").find("div[name='a']").length);
-            alert($("input[name='d']").length);
+//            alert($("input[name='d']").length);
             $("#sum").find("div[name='a']").each(function () {
 //                alert($(this).find("input[name='d']").eq(0).attr("value"))
 //                alert($(this).find("input[id='d']").eq(0) instanceof jQuery);
-                alert($(this).attr("value"));
+                alert($(this).find("input[name='d']").length);
             });
         });
 
@@ -42,23 +43,23 @@
             <tr>
                 <td>
                     <input id="d" name="d" type="button" value="t"/>
-                    <input id="e" name="d" type="button" value="t"/>
+                    <input id="d" name="d" type="button" value="t"/>
                 </td>
             </tr>
         </div>
         <div id="b" name="a">
             <tr>
                 <td>
-                    <input id="f" name="d" type="button" value="d"/>
+                    <input id="d" name="d" type="button" value="d"/>
                 </td>
             </tr>
         </div>
         <div id="c" name="a">
             <tr>
                 <td>
-                    <input id="g" name="d" type="button" value="d"/>
-                    <input id="h" name="d" type="button" value="d"/>
-                    <input id="i" name="d" type="button" value="d"/>
+                    <input id="d" name="d" type="button" value="d"/>
+                    <input id="d" name="d" type="button" value="d"/>
+                    <input id="d" name="d" type="button" value="d"/>
                 </td>
             </tr>
         </div>
