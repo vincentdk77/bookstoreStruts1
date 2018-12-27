@@ -19,7 +19,7 @@ public class JDBCUtils {
 	private static DataSource dataSource = null;
 	
 	static{
-		dataSource = new ComboPooledDataSource("dk");
+		dataSource = new ComboPooledDataSource("javawebapp");
 	}
 	
 	//????????????
