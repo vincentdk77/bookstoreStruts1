@@ -14,13 +14,15 @@
     <script language="javascript" type="text/javascript">
 
         $(function () {
-            alert($("#d").length);
+            //alert($("div[id='a']").length);
 //            alert($("#sum").find("div[name='a']").length);
 //            alert($("input[name='d']").length);
-            $("#sum").find("div[name='a']").each(function () {
-//                alert($(this).find("input[name='d']").eq(0).attr("value"))
+            $("div[name='a']").each(function () {
+//                alert($(this).find("input[name='d']").lenth)
+                var str = $(this).find("input[name='d']");
+                alert(str.length);
 //                alert($(this).find("input[id='d']").eq(0) instanceof jQuery);
-                alert($(this).find("input[name='d']").length);
+//                alert($(this).attr("value"));
             });
         });
 
@@ -34,36 +36,40 @@
     </script>
 </head>
 <body>
-<div id="sum">
-
+<form>
 
     <table>
-        <input type="text">
         <div id="a" name="a">
-            <tr>
+            <tr id="tr1">
                 <td>
                     <input id="d" name="d" type="button" value="t"/>
+                    <input id="e" name="d" type="button" value="t"/>
+                </td>
+            </tr>
+            <tr id="tr2">
+                <td>
                     <input id="d" name="d" type="button" value="t"/>
+                    <input id="e" name="d" type="button" value="t"/>
                 </td>
             </tr>
         </div>
         <div id="b" name="a">
             <tr>
                 <td>
-                    <input id="d" name="d" type="button" value="d"/>
+                    <input id="f" name="d" type="button" value="d"/>
                 </td>
             </tr>
         </div>
         <div id="c" name="a">
             <tr>
                 <td>
-                    <input id="d" name="d" type="button" value="d"/>
-                    <input id="d" name="d" type="button" value="d"/>
-                    <input id="d" name="d" type="button" value="d"/>
+                    <input id="g" name="d" type="button" value="d"/>
+                    <input id="h" name="d" type="button" value="d"/>
+                    <input id="i" name="d" type="button" value="d"/>
                 </td>
             </tr>
         </div>
     </table>
-</div>
+</form>
 </body>
 </html>

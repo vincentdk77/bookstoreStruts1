@@ -22,7 +22,43 @@ public class LoginFacade extends Action {
         String sql = "SELECT count(id) FROM mybooks WHERE price >= ? AND price <= ?";
         long sum = (Long) queryRunner.query(connection, sql, new ScalarHandler(), 1,55);
         System.err.println("sum="+sum);
-        return mapping.findForward("failed");
+//        return mapping.findForward("success");
 
+        return mapping.findForward(test());
+
+    }
+    public String test (){
+        String str ="";
+        String str1 ="";
+        try {
+            int a = 1/0;
+        }catch (Exception e){
+            try{
+                int a = 1/0;
+            }catch (Exception e3){
+                str = "in";
+//                return str;
+            }
+            str = "out";//上面的子catch走完后 依然会继续往下走主catch的这段代码
+            return str;
+        }finally{
+            int a = 3;
+        }
+        int b = 3;
+        try {
+            int a = 1/0;
+        }catch (Exception e){
+            try{
+                int a = 1/0;
+            }catch (Exception e3){
+                str = "in";
+//                return str;
+            }
+            str = "out";//上面的子catch走完后 依然会继续往下走主catch的这段代码
+            return str;
+        }finally{
+            int a = 3;
+        }
+        return str;
     }
 }
