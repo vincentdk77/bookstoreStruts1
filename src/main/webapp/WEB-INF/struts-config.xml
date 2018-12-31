@@ -30,6 +30,13 @@
         </action>
         <action path="/getbooks" type="com.vicentdk77.bookstore.facade.BooksFacade" validate="false" scope="request" >
             <forward name="success" path="/books.jsp"></forward>
+            <forward name="shoppingCar" path="/shoppingCar.jsp"></forward>
+        </action>
+        <action path="/book" type="com.vicentdk77.bookstore.facade.BookDetailFacade" validate="false" scope="request" >
+            <forward name="success" path="/book.jsp"></forward>
+        </action>
+        <action path="/shoppingcar" type="com.vicentdk77.bookstore.facade.ShoppingCarFacade" validate="false" scope="request" >
+            <forward name="success" path="/shoppingCar.jsp"></forward>
         </action>
     </action-mappings>
 </struts-config>

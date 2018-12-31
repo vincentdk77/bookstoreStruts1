@@ -11,6 +11,10 @@ public class MyBooksDto implements Serializable{
     private String salesAmount;
     private String storeNumber;
     private String remark;
+    /**
+     * 购物车中的当前id的书的个数
+     */
+    private int count;
 
     public MyBooksDto() {
     }
@@ -77,5 +81,13 @@ public class MyBooksDto implements Serializable{
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

@@ -12,11 +12,21 @@
 <html>
 <head>
     <title>书本展示页</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        function addShoopingCar(obj) {
+            var id = $(this).parent().find("input[id='id']");
+            window.location.href="shoppingcar.do?type=add&id=id";
+        }
+    </script>
 </head>
 <body>
-    <table width='100%' border='0' cellspacing='0' cellpadding='0' class='mytable' style='table-layout: fixed'>
-        <tr >
-            <td>序号</td>
+    <div>
+        <a href="getbooks.do?type=shoppingCar">购物车</a>
+    </div>
+    <table width='100%' border='1' cellspacing='0' cellpadding='0' class='mytable' style='table-layout: fixed'>
+        <tr align="center" style="color: blueviolet">
+            <td width="5%">序号</td>
             <td>图片</td>
             <td>价格</td>
             <td>书名</td>
@@ -26,15 +36,18 @@
             <td>加入购物车</td>
         </tr>
         <c:forEach items="${mybooksList}" var="book" varStatus="count">
-            <tr>
+            <tr align="center">
                 <td>${count.count}</td>
-                <td>图片</td>
+                <td><a href="book.do?id=${book.id}"><img src="http://img.zcool.cn/community/01f9ea56e282836ac72531cbe0233b.jpg@2o.jpg" height="200" width="200" ></a></td>
                 <td>${book.price}</td>
                 <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.publishingDate}</td>
                 <td>${book.salesAmount}</td>
-                <td>加入购物车</td>
+                <td>
+                    <input type="button" value="加入购物车" onclick="addShoopingCar(this)">
+                    <input type="hidden" id="id" value="${book.id}" >
+                </td>
             </tr>
         </c:forEach>
     </table>
