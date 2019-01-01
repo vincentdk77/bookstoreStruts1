@@ -15,8 +15,20 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         function addShoopingCar(obj) {
-            var id = $(this).parent().find("input[id='id']");
-            window.location.href="shoppingcar.do?type=add&id=id";
+            var id = $(obj).next().val();
+//            window.location.href="shoppingcar.do?type=add&id="+id;
+
+            $.ajax({
+                type: "GET",
+                url: "shoppingcar.do?type=add&id="+id,
+                success: function(data){
+                    if(data == 'success'){
+                        alert("已加入购物车！");
+                    }else{
+                        alert("加入失败！");
+                    }
+                }
+            });
         }
     </script>
 </head>

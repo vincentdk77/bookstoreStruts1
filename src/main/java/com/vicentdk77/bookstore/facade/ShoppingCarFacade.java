@@ -22,6 +22,8 @@ public class ShoppingCarFacade extends Action{
         String id= request.getParameter("id");
         if("add".equals(type)){
             add(id,request);
+            response.getWriter().write("success");
+            return null;
         }
         return mapping.findForward("success");
     }
@@ -39,7 +41,8 @@ public class ShoppingCarFacade extends Action{
                 if(id1.equals(id)){//购物车中已有这本书
                     book.setCount(book.getCount()+1);
                     haveId = true;
-                    break;
+                    session.setAttribute("shoppingCarList",myBooksDtos);
+                    return;
                 }
             }
             if(!haveId){//购物车中没有这本书
@@ -47,8 +50,10 @@ public class ShoppingCarFacade extends Action{
             }
         }else{//第一次使用"加入购物车"
             myBooksDtos = new ArrayList<>();
+            myBooksDto.setCount(1);
         }
         myBooksDtos.add(myBooksDto);
         session.setAttribute("shoppingCarList",myBooksDtos);
+
     }
 }
